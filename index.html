@@ -78,16 +78,47 @@
 				Play on Steam!</h1>
 			</div></section>
         <section class="border-dark d-flex d-lg-flex justify-content-center justify-content-lg-center clean-block clean-info dark" id="SectionPlay-1" style="background-color: rgb(5,7,6);padding-top: 0px;padding-right: 0px;padding-left: 0px;padding-bottom: 30px;">
-            <div class="text-center"><iframe width="480" height="200" src="https://store.steampowered.com/widget/1108170/" frameborder="0"></iframe>
+            <div class="text-center">
+      <div id="xsolla-buy-button-widget"></div>
+      <script>
+          var options = {
+              project_id: "219583",
+              sku: "d238e0e182",
+              item_type: "unit",
+              api_settings: {
+                  sandbox: false,
+              },
+              widget_ui: {
+                  target_element: "#xsolla-buy-button-widget",
+                  theme: {
+                      foreground: "green",
+                      background: "dark"
+                  },
+              },
+              payment_widget_ui: {
+                  lightbox: {
+                      height: '200px',
+                      weight: '480px',
+                      spinner: 'round'
+                  }
+            }
+          };
+          var s = document.createElement('script');
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://cdn.xsolla.net/embed/buy-button/3.1.8/widget.min.js";
+          s.addEventListener('load', function (e) {
+              var widgetInstance = XBuyButtonWidget.create(options);
+          }, false);
+          var head = document.getElementsByTagName('head')[0];
+          head.appendChild(s);
+      </script>
+      
 
     
 
 	
-                <div style="padding-right: 30px;"></div><iframe width="480" height="200" src="https://store.steampowered.com/widget/1544570/" frameborder="0"  ></iframe>
-
-    
-
-	
+                <div style="padding-right: 30px;"></div>
             </div>
         </section>
         <section class="text-center border-dark d-flex justify-content-center justify-content-xl-center clean-block clean-info dark" id="SectionPlay-2" style="background-color: rgb(5,7,6);padding-top: 0px;padding-right: 0px;padding-left: 0px;padding-bottom: 30px;"><div  class="game_area_purchase_game demo_above_purchase">
