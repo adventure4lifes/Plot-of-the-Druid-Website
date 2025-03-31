@@ -62,73 +62,108 @@
         <section class="text-center border-dark d-flex flex-column justify-content-center justify-content-xl-center clean-block clean-info dark" id="SectionCover" style="background-color: rgb(5,7,6);padding-top: 100px;">
 
 <div class="box press">
-    <img src="https://plotofthedruid.com/assets/img/Cover_release.jpg" height="92%" width="92%"></div>
+    <img src="https://plotofthedruid.com/assets/img/Cover_release_clean.png" height="92%" width="92%"></div>
 
 
 
 
 
 </section>
-        <section class="text-center border-dark d-flex flex-column justify-content-center justify-content-xl-center clean-block clean-info dark" id="SectionTrailer" style="background-color: rgb(5,7,6);padding-top: 0px;"><div class="videoWrapper">
-		<!-- Copy & Pasted from YouTube -->
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/Js6bxGwOl-s" frameborder="0"></iframe>
-	</div></section>
-        <section class="text-center border-dark d-flex justify-content-center justify-content-xl-center clean-block clean-info dark" id="SectionPlay" style="background-color: rgb(5,7,6);padding-top: 0px;padding-right: 0px;padding-left: 0px;padding-bottom: 30px;"><div  class="game_area_purchase_game demo_above_purchase">
-			<h1 style="color: #fff; " margin-bottom=0>
-				Play on Steam!</h1>
-			</div></section>
-        <section class="border-dark d-flex d-lg-flex justify-content-center justify-content-lg-center clean-block clean-info dark" id="SectionPlay-1" style="background-color: rgb(5,7,6);padding-top: 0px;padding-right: 0px;padding-left: 0px;padding-bottom: 30px;">
-            <div class="text-center">
-      <div id="xsolla-buy-button-widget"></div>
-      <script>
-          var options = {
-              project_id: "219583",
-              sku: "d238e0e182",
-              item_type: "unit",
-              api_settings: {
-                  sandbox: false,
-              },
-              widget_ui: {
-                  target_element: "#xsolla-buy-button-widget",
-                  theme: {
-                      foreground: "green",
-                      background: "dark"
-                  },
-              },
-              payment_widget_ui: {
-                  lightbox: {
-                      height: '700px',
-                      spinner: 'round'
-                  }
-            }
-          };
-          var s = document.createElement('script');
-          s.type = "text/javascript";
-          s.async = true;
-          s.src = "https://cdn.xsolla.net/embed/buy-button/3.1.8/widget.min.js";
-          s.addEventListener('load', function (e) {
-              var widgetInstance = XBuyButtonWidget.create(options);
-          }, false);
-          var head = document.getElementsByTagName('head')[0];
-          head.appendChild(s);
-      </script>
-      
+        <section class="border-dark d-flex d-lg-flex justify-content-center justify-content-lg-center clean-block clean-info dark" id="SectionPlay-1" style="background-color: rgb(5,7,6);padding-top: 0px;padding-right: 0px;padding-left: 0px;padding-bottom: 30px;"><style>
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* More space between buttons */
+    justify-content: center;
+    margin: 80px 0; /* More space above and below */
+  }
 
-    
+  .button-container img {
+    width: 100%;
+    max-width: 500px; /* Bigger buttons for large screens */
+    min-width: 250px; /* Prevents them from being too small */
+    height: auto;
+  }
 
-	
-                <div style="padding-right: 30px;"></div>
-            </div>
-        </section>
-        <section class="text-center border-dark d-flex justify-content-center justify-content-xl-center clean-block clean-info dark" id="SectionPlay-2" style="background-color: rgb(5,7,6);padding-top: 0px;padding-right: 0px;padding-left: 0px;padding-bottom: 30px;"><div  class="game_area_purchase_game demo_above_purchase">
-			<h1 style="color: #fff; " margin-bottom=0>
-				Play on Itch.io!</h1>
-			</div></section>
-        <section class="border-dark d-flex d-lg-flex justify-content-center justify-content-lg-center clean-block clean-info dark" id="SectionPlay-3" style="background-color: rgb(5,7,6);padding-top: 0px;padding-right: 0px;padding-left: 0px;padding-bottom: 30px;">
-            <div class="text-center"><iframe frameborder="0" src="https://itch.io/embed/1776472?linkback=true&amp;border_width=0&amp;bg_color=282E39&amp;fg_color=ffffff&amp;border_color=000000" width="552" height="167"><a href="https://adventure4lifes.itch.io/plot-of-the-druid">Plot of the Druid by Adventure4life</a></iframe>
-                <div style="padding-right: 30px;"></div><iframe frameborder="0" src="https://itch.io/embed/969329?linkback=true&amp;border_width=0&amp;bg_color=282E39&amp;fg_color=ffffff&amp;border_color=000000" width="552" height="167"><a href="https://adventure4lifes.itch.io/plot-of-the-druid-nightwatch">Plot of the Druid: Nightwatch by Adventure4life</a></iframe>
-            </div>
-        </section>
+  /* Even larger buttons for really big screens (1920px+) */
+  @media (min-width: 1600px) {
+    .button-container img {
+      max-width: 600px; /* Extra large buttons */
+    }
+  }
+
+  /* Medium screens (tablets) */
+  @media (max-width: 1200px) {
+    .button-container img {
+      max-width: 400px;
+    }
+  }
+
+  /* Mobile screens (phones) */
+  @media (max-width: 768px) {
+    .button-container img {
+      max-width: 250px; /* Smaller buttons for mobile */
+      min-width: 150px;
+    }
+  }
+</style>
+
+<div class="button-container">
+    <div class="box press">
+        <a href="https://apps.apple.com/us/app/plot-of-the-druid-chapter-1/id6532588436" target="_blank">
+            <img src="https://plotofthedruid.com/assets/img/downloads/download_apple.png" alt="">
+        </a>
+    </div>
+
+    <div class="box press">
+        <a href="https://play.google.com/store/apps/details?id=com.Adventure4Life.PlotOfTheDruid&hl=en_GB" target="_blank">
+            <img src="https://plotofthedruid.com/assets/img/downloads/download_google.png" alt="">
+        </a>
+    </div>
+
+    <div class="box press">
+        <a href="https://store.steampowered.com/app/1108170/Plot_of_the-Druid/" target="_blank">
+            <img src="https://plotofthedruid.com/assets/img/downloads/download_steam.png" alt="">
+        </a>
+    </div>
+
+    <div class="box press">
+        <a href="https://store.playstation.com/en-us/concept/10012217" target="_blank">
+            <img src="https://plotofthedruid.com/assets/img/downloads/download_switch.png" alt="">
+        </a>
+    </div>
+
+    <div class="box press">
+        <a href="https://store.playstation.com/en-us/concept/10012217" target="_blank">
+            <img src="https://plotofthedruid.com/assets/img/downloads/download_playstation.png" alt="">
+        </a>
+    </div>
+</div>
+</section>
+        <section class="text-center border-dark d-flex flex-column justify-content-center justify-content-xl-center clean-block clean-info dark" id="SectionTrailer" style="background-color: rgb(5,7,6);padding-top: 0px;"><style>
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio (16:9) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+  }
+
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<div class="videoWrapper">
+  <!-- Copy & Pasted from YouTube -->
+  <iframe src="https://www.youtube.com/embed/Js6bxGwOl-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</section>
         <section class="text-center d-flex clean-block about-us" id="SectionBrief">
             <div class="text-center d-xl-flex justify-content-xl-center">
                 <h2 class="text-center d-flex d-lg-flex d-xl-flex justify-content-lg-center align-items-xl-center" id="TextHeading" style="font-family: Acme, sans-serif;font-size: 38px;color: rgb(92,34,76);filter: brightness(200%) contrast(200%) grayscale(0%) hue-rotate(0deg) invert(0%) saturate(100%);padding-top: 0px;margin-left: 0;margin-top: 0px;min-width: 50%;width: fit-content;"><br><br>Make earthquakes.<br>&nbsp;Turn night into day.<br>&nbsp;Transform into a small furry creature.<br>&nbsp;No one can party like a druid!<br><br></h2>
@@ -161,16 +196,11 @@
                 </div>
             </div>
         </section>
-        <section class="text-center d-flex justify-content-center flex-sm-shrink-1 clean-block about-us" id="SectionPress" style="padding-bottom: 0px;">
-
-<div class="box press">
-    <img src="https://plotofthedruid.com/assets/img/presskit2.png" height="92%" width="92%" alt="Download the press pack"></div>
-
-
-
-
-
-</section>
+        <section class="text-center d-flex justify-content-center flex-sm-shrink-1 clean-block about-us" id="SectionPress" style="padding-bottom: 0px;"><div class="box press">
+    <a href="https://plotofthedruid.com/downloads/PlotOfTheDruidPressKit.rar" download="PlotOfTheDruidPressKit.rar">
+        <img src="https://plotofthedruid.com/assets/img/presskit2.png" height="92%" width="92%" alt="Download the press pack">
+    </a>
+</div></section>
     </main>
     <section id="Contact">
         <div class="text-center d-xl-flex justify-content-xl-center" style="padding: 0px;background-color: #f1eaea;font-size: 0px;line-height: 0px;padding-bottom: 0px;padding-top: 21px;margin-top: 75px;padding-right: 0px;padding-left: 0px;"><div class="mail-zone">
@@ -248,7 +278,7 @@
     </div>
     <footer class="text-center d-xl-flex justify-content-xl-center align-items-xl-end page-footer dark" style="opacity: 1;">
         <div class="text-center footer-copyright" style="background-color: rgba(34,36,37,0);opacity: 1;height: 0px;margin-top: 78px;padding-top: -59px;">
-            <p style="background-repeat: repeat;margin-top: -46px;">© 2023 Adventure4Life Studios</p>
+            <p style="background-repeat: repeat;margin-top: -46px;">© 2025 Adventure4Life Studios</p>
         </div>
         <div class="text-center" style="padding: 4px;padding-left: 16px;margin-bottom: 0px;padding-bottom: 8px;">			<div class="white-zone bottom-part">
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="paypal-payment">
