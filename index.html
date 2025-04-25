@@ -71,59 +71,60 @@
 </section>
         <section class="border-dark d-flex d-lg-flex justify-content-center justify-content-lg-center clean-block clean-info dark" id="SectionPlay-1" style="background-color: rgb(5,7,6);padding-top: 0px;padding-right: 0px;padding-left: 0px;padding-bottom: 30px;"><style>
   .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px; /* More space between buttons */
+    display: grid;
+    gap: 40px;
     justify-content: center;
-    margin: 80px 0; /* More space above and below */
+    margin: 80px 0;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
   }
 
   .button-container img {
     width: 100%;
-    max-width: 500px; /* Bigger buttons for large screens */
-    min-width: 250px; /* Prevents them from being too small */
+    max-width: 500px;
+    min-width: 250px;
     height: auto;
+    justify-self: center; /* Centers the image in its grid cell */
   }
 
-  /* Even larger buttons for really big screens (1920px+) */
   @media (min-width: 1600px) {
     .button-container img {
-      max-width: 600px; /* Extra large buttons */
+      max-width: 600px;
     }
   }
 
-  /* Medium screens (tablets) */
   @media (max-width: 1200px) {
     .button-container img {
       max-width: 400px;
     }
   }
 
-  /* Mobile screens (phones) */
   @media (max-width: 768px) {
+    .button-container {
+      grid-template-columns: 1fr; /* Switch to single column list on mobile */
+    }
+
     .button-container img {
-      max-width: 250px; /* Smaller buttons for mobile */
+      max-width: 250px;
       min-width: 150px;
     }
   }
 </style>
-
 <div class="button-container">
     <div class="box press">
         <a href="https://apps.apple.com/us/app/plot-of-the-druid-chapter-1/id6532588436" target="_blank">
             <img src="https://plotofthedruid.com/assets/img/downloads/download_apple.png" alt="">
         </a>
     </div>
-
+    
     <div class="box press">
-        <a href="https://play.google.com/store/apps/details?id=com.Adventure4Life.PlotOfTheDruid&hl=en_GB" target="_blank">
-            <img src="https://plotofthedruid.com/assets/img/downloads/download_google.png" alt="">
+        <a href="https://store.steampowered.com/app/1108170/Plot_of_the-Druid/" target="_blank">
+            <img src="https://plotofthedruid.com/assets/img/downloads/download_steam.png" alt="">
         </a>
     </div>
 
     <div class="box press">
-        <a href="https://store.steampowered.com/app/1108170/Plot_of_the-Druid/" target="_blank">
-            <img src="https://plotofthedruid.com/assets/img/downloads/download_steam.png" alt="">
+        <a href="https://play.google.com/store/apps/details?id=com.Adventure4Life.PlotOfTheDruid&hl=en_GB" target="_blank">
+            <img src="https://plotofthedruid.com/assets/img/downloads/download_google.png" alt="">
         </a>
     </div>
 
